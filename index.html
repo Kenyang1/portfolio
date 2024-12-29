@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="#hero">Kenyang Lual</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hi, I'm [Your Name]. A passionate [Your Profession].</p>
+      <button id="learn-more-btn">Learn More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div id="about-container">
+            <h2>About Me</h2>
+            <p>This is the about section where you describe yourself and your journey.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul id="skills-list"></ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Highlight your professional or educational experience here.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="project-container"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
