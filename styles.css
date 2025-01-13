@@ -126,8 +126,9 @@ li a:hover::before {
 }
 .about-section {
   position: relative;
-  margin-top: 20%;
+  margin-top: 5%;
 }
+
 
 .info-box {
   display: flex;
@@ -181,18 +182,33 @@ li a:hover::before {
 
 .about-card {
   display: flex;
-  padding: 70px;
-  column-gap: 100px;
-  margin: 100px;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px;
+  gap: 30px;
+  margin: 50px 50px;
   justify-content: center;
   background-color: #9381ff;
   border-radius: 20px;
+  columns: 2;
   border: 3px solid black;
   box-shadow: 0.5px 4px 0 black;
-  
+  text-wrap: none;
+  max-width: 1200px;
+  width: 90%;
+
+}
+.container {
+  margin-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .about-card img {
-  height: 200px;
+  max-height: 200px;
+  height: auto;
+  flex-shrink: 0;
   width: auto;
 }
 .dot {
