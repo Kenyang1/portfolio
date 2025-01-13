@@ -80,10 +80,24 @@ li a:hover::before {
 
 
 }
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+  margin: 15px;
+  margin-bottom: 10px;
+
+
+}
 #resume-btn {
   background-color: #d2f3d5;
-  margin-bottom: 10px;
-  gap: 10px;
+}
+#pfp {
+  height: 300px;
+  width: auto;
+  margin-bottom: 1px;
 }
 .visit-btn:hover{
   transform: scale(1.03);
@@ -93,25 +107,98 @@ li a:hover::before {
   display: none;
 }
 .hero-section {
-position: fixed;
-margin-top: 150px;
-left: 50%;
-transform: translateX(-50%);
-text-align: center;
-justify-content: center;
-display: block;
-border-color: aqua;
-padding: 50px;
-background-color: white;
-border-radius: 10px;
-box-shadow: 10px 10px black;
-border: 3px solid black;
+  position: relative; /* Changed from fixed */
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+  border-color: aqua;
+  padding: 1rem; /* Adjust padding to resize the section */
+  line-height: 1.6;
+
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px black;
+  border: 3px solid black;
+  max-width: 800px; /* Added to control width */
+  width: 90%; /* Responsive adjustment */
+}
+.about-section {
+  position: relative;
+  margin-top: 20%;
 }
 
+.info-box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 1.5rem;
+}
+.info-box h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.info-box h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.info-box span {
+  background-color: #9381ff;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: transparent;
+}
+.socials {
+  font-size: 2rem;
+  cursor: pointer;
+  justify-content: center;
+  gap: 1.5rem;
+  transition: 0.3 ease-in-out;
+
+}
+.socials i:hover {
+  transform: scale(1.03);
+
+}
+.section-title {
+  padding: 50px 20px; /* Added spacing to the section for clarity */
+  text-align: center;
+}
+.section-title h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.section-title h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about-card {
+  display: flex;
+  padding: 70px;
+  column-gap: 100px;
+  margin: 100px;
+  justify-content: center;
+  background-color: #9381ff;
+  border-radius: 20px;
+  border: 3px solid black;
+  box-shadow: 0.5px 4px 0 black;
+  
+}
+.about-card img {
+  height: 200px;
+  width: auto;
+}
 .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   background: #f9f9f9;
   border-radius: 50%;
   margin: 0 4px 0 0;
