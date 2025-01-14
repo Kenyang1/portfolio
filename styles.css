@@ -127,6 +127,8 @@ li a:hover::before {
 .about-section {
   position: relative;
   margin-top: 5%;
+  padding: 2rem 0;
+
 }
 
 
@@ -166,7 +168,6 @@ li a:hover::before {
 
 }
 .section-title {
-  padding: 50px 20px; /* Added spacing to the section for clarity */
   text-align: center;
 }
 .section-title h3 {
@@ -181,16 +182,12 @@ li a:hover::before {
 }
 
 .about-card {
-  display: flex;
-  flex-direction: row;
+
   align-items: center;
-  padding: 50px;
-  gap: 30px;
-  margin: 50px 50px;
+  padding: 20px;
   justify-content: center;
   background-color: #9381ff;
   border-radius: 20px;
-  columns: 2;
   border: 3px solid black;
   box-shadow: 0.5px 4px 0 black;
   text-wrap: none;
@@ -199,17 +196,23 @@ li a:hover::before {
 
 }
 .container {
-  margin-top: 1px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  gap: 2rem; /* Space between image and about-card */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 1rem;
+  text-align: left;
 }
 .about-card img {
-  max-height: 200px;
-  height: auto;
-  flex-shrink: 0;
-  width: auto;
+  height: 0 auto;
+  width: 1px;
+}
+.about-card p {
+  line-height: 1.5rem;
+  font-weight: bold;
 }
 .dot {
   display: inline-block;
@@ -234,4 +237,63 @@ li a:hover::before {
     background: #27C93F;
     border: 1px solid #1DAD2B;
   }
+}
+
+/* Section 2 Skills */
+.skills-section {
+  background-color: #99c1b9;
+  padding: 0 50px;
+  margin-bottom: 100px;
+  margin-top: 250px;
+}
+.skills-section h3{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.skills-section h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.skills-section p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 35px;
+}
+
+.skills-section .cells {
+  display: flex;
+  justify-content: center;
+  text-wrap: wrap;
+}
+.skills-section .cells .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200;
+  padding: 10px 20px;
+  margin: 20px;
+  border: 1.5px solid #ffffff;
+  background-color: black;
+  box-shadow: 0.5px 4px 0 rgb(249, 249, 249);
+  border-radius: 5px;
+  
+}
+.skills-section .cells .cell img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 2px;
+
+}
+
+.skills-section .cells .cell span {
+  color: white;
+  font-weight: bold;
 }
