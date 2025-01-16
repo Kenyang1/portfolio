@@ -242,14 +242,15 @@ li a:hover::before {
 /* Section 2 Skills */
 .skills-section {
   background-color: #99c1b9;
-  padding: 0 50px;
+  padding: 50px 50px;
   margin-bottom: 100px;
   margin-top: 250px;
+  justify-content: center;
+  align-items: center;
 }
 .skills-section h3{
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 12px;
   font-size: 1.5rem;
   font-weight: 500;
   opacity: 0.8;
@@ -258,6 +259,7 @@ li a:hover::before {
   text-align: center;
   font-size: 1.5rem;
   font-size: 2rem;
+  padding-bottom: 12px;
   font-weight: 600;
 }
 .skills-section p {
@@ -270,6 +272,7 @@ li a:hover::before {
   display: flex;
   justify-content: center;
   text-wrap: wrap;
+  flex-wrap: wrap;
 }
 .skills-section .cells .cell {
   display: flex;
@@ -296,4 +299,71 @@ li a:hover::before {
 .skills-section .cells .cell span {
   color: white;
   font-weight: bold;
+}
+.experience-section {
+  padding: 50px 10%;
+  margin-bottom: 100px;
+  margin-top: 250px;
+  display: flex; /* Ensures proper alignment of section content */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-section .experience-box {
+  background-color: white;
+  padding: 40px;
+  width: 50%;
+  display: block; 
+  direction: ltr;
+  border-radius: 10px; 
+  box-shadow: 2px 4px 0px black; 
+}
+
+.experience-section h3 {
+  display: block; 
+  text-align: inline; 
+  font-size: 1.5rem;
+  color: gray;
+  padding-top: 2%;
+}
+.experience-section h1 {
+  margin-bottom: 10%;
+
+}
+
+.experience-section .experience-box h3 {
+  color: gray;
+  padding-top: 1%;
+}
+
+.experience-section .experience-box h4 {
+  color: gray;
+  padding-top: 1%;
+}
+
+.experience-section .experience-box .experience-dates {
+  background-color: #9381ff;
+  width: 140px;
+  padding: 4px; /* Simplified padding */
+  margin-top: 1%;
+  border-radius: 10px;
+  text-align: center; 
+}
+
+.experience-section .experience-box img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain; 
+}
+
+.experience-section .experience-box .img-box {
+  background-color: #ffffff;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 75px; 
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px black;
 }
