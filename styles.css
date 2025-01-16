@@ -107,22 +107,22 @@ li a:hover::before {
   display: none;
 }
 .hero-section {
-  position: relative; /* Changed from fixed */
+  position: relative;
   margin-top: 150px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   display: block;
   border-color: aqua;
-  padding: 1rem; /* Adjust padding to resize the section */
+  padding: 1rem; 
   line-height: 1.6;
 
   background-color: white;
   border-radius: 10px;
   box-shadow: 10px 10px black;
   border: 3px solid black;
-  max-width: 800px; /* Added to control width */
-  width: 90%; /* Responsive adjustment */
+  max-width: 800px; 
+  width: 90%; 
 }
 .about-section {
   position: relative;
@@ -200,9 +200,9 @@ li a:hover::before {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Space between image and about-card */
+  gap: 2rem; 
   max-width: 1200px;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto; 
   padding: 1rem;
   text-align: left;
 }
@@ -300,70 +300,130 @@ li a:hover::before {
   color: white;
   font-weight: bold;
 }
+
 .experience-section {
-  padding: 50px 10%;
-  margin-bottom: 100px;
-  margin-top: 250px;
-  display: flex; /* Ensures proper alignment of section content */
+  padding: 50px 5%;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.experience-section .experience-box {
-  background-color: white;
-  padding: 40px;
-  width: 50%;
-  display: block; 
-  direction: ltr;
-  border-radius: 10px; 
-  box-shadow: 2px 4px 0px black; 
-}
-
-.experience-section h3 {
-  display: block; 
-  text-align: inline; 
-  font-size: 1.5rem;
-  color: gray;
-  padding-top: 2%;
-}
 .experience-section h1 {
-  margin-bottom: 10%;
-
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
 }
 
-.experience-section .experience-box h3 {
-  color: gray;
-  padding-top: 1%;
+/* Timeline Styles */
+.timeline {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
 }
 
-.experience-section .experience-box h4 {
-  color: gray;
-  padding-top: 1%;
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-.experience-section .experience-box .experience-dates {
-  background-color: #9381ff;
-  width: 140px;
-  padding: 4px; /* Simplified padding */
-  margin-top: 1%;
-  border-radius: 10px;
-  text-align: center; 
+.timeline-item .icon-container {
+  flex-shrink: 0;
+  margin-right: 15px;
 }
 
-.experience-section .experience-box img {
-  height: 50px;
-  width: 50px;
-  object-fit: contain; 
-}
-
-.experience-section .experience-box .img-box {
-  background-color: #ffffff;
-  border: 1px solid black;
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  width: 75px; 
-  border-radius: 20px;
-  box-shadow: 5px 5px 0px black;
 }
+
+.timeline-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  z-index: -1;
+}
+
+.timeline-item:last-child:before {
+  display: none;
+}
+
+/* Experience Card */
+.experience-box {
+  background: #ffffff;
+  border-radius: 12px;
+  border-color: black;
+  box-shadow: 3px 4px 0px hsl(0, 0%, 0%);
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.experience-box h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+
+.experience-box h4 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+/* Dates, Badges*/
+.date-location {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.badge.green {
+  background-color: #dfffd6;
+  color: #3a7a3f;
+}
+
+.badge.location {
+  background-color: #e5e5e5;
+  color: #666;
+}
+
