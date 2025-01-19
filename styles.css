@@ -117,9 +117,12 @@ li a:hover::before {
 .visit-btn:hover{
   transform: scale(1.03);
 }
-#menu-icon{
-  font-size: 2rem;
-  display: none;
+/* Menu Icon Styles */
+#menu-icon {
+  display: none; /* Hide by default */
+  width: 30px;   /* Adjust size */
+  height: 30px;
+  cursor: pointer;
 }
 .hero-section {
   position: relative;
@@ -506,4 +509,149 @@ li a:hover::before {
 .btn-group {
   display: flex;
   gap: 30px;
+}
+
+/* Email Section */
+.contact {
+  margin-left: 20%;
+  margin-right: 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+
+}
+.contact h1{
+  margin-bottom: 1%;
+  font-size: 1.5rem;
+  font-size: 2rem;
+  padding-bottom: 12px;
+}
+.email-btn {
+  background-color: white;
+  padding: 2rem; /* Adjust padding as needed */
+  width: auto; /* Adjust width automatically to fit content */
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0; /* Center horizontally if no parent flex/grid */
+  margin-bottom: 3%;
+  box-shadow: 1px 2px black;
+
+}
+.email-btn #email {
+  font-size: 2rem; 
+  color: #0101016a;
+  position: relative;
+}
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+.parent-container img{
+  height: 200px;
+  width: auto;
+  margin: 0;
+  margin-bottom: 0;
+  position: relative;
+  top: 35px;
+}
+.contact h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@media(max-width:1280px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+  .about-section .container {
+    flex-direction: column;
+  }
+
+  
+  .experience-box {
+    flex-direction: column;
+  }
+}
+
+@media(max-width:768px) {
+  header {
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+  header .visit-btn {
+    display: none;
+  }
+  .about-section .container {
+    flex-direction: column;
+  }
+  
+  header .logo {
+    font-size: 1rem;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  header {
+    display: block;
+    padding: 1rem 5rem;
+    gap: 8rem;
+  }
+
+  #menu-icon {
+    display: block !important;
+    width: 30px;
+    height: 30px;
+    z-index: 1001 !important;
+    position: relative !important;
+    cursor: pointer; /* Add cursor styling */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1.5rem;
+    position: absolute;
+    top: 100%;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+  .nav-links li {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .about-section .container img {
+    height: 70vh;
+  }
+
+  header .logo {
+    font-size: 1.5rem;
+  }
 }
