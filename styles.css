@@ -48,6 +48,7 @@ header {
 .nav-links{
   display: flex;
   gap: 2rem;
+  
 }
 li a {
   position: relative;
@@ -565,6 +566,11 @@ li a:hover::before {
   margin-bottom: 5%;
   text-align: center;
 
+}
+.experience-section h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
 }
 .btn {
   display: inline-block;
