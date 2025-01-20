@@ -467,6 +467,27 @@ li a:hover::before {
   color: #666;
   margin: 5px 0 0;
 }
+/* CSS for subsections */
+.subsection {
+  margin-top: 15px;
+  padding-left: 20px;
+  border-left: 3px solid #363636;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.subsection h5 {
+  font-size: 16px;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.subsection p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
 
 /* Dates, Badges*/
 .date-location {
