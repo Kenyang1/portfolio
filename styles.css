@@ -7,6 +7,26 @@
   scroll-behavior: smooth;
   list-style: none;
 }
+/* Ensures all links remain black */
+a {
+  color: black !important; /* Forces black color for links */
+  text-decoration: none; /* Removes default underline */
+}
+
+/* Prevents color change when visited */
+a:visited {
+  color: black !important;
+}
+
+/* Prevents color change on hover */
+a:hover {
+  color: black !important;
+}
+
+/* Prevents color change when active (clicked) */
+a:active {
+  color: black !important;
+}
 
 body {
   background-color: #efd9c0;
