@@ -582,8 +582,11 @@ li a:hover::before {
   transform: translateY(-10px)scale(1.02);
 }
 .project-card img{
-  width: 20vw;
+  width: 100%;           /* full width of the card */
+  max-width: 300px;      /* don't let it grow too big */
+  height: auto;
   border-radius: 1rem;
+  object-fit: cover;     /* keeps nice scaling */
 }
 .project-card .section-title{
   font-weight: bold;
@@ -658,8 +661,8 @@ a:active {
 
 /* Email Section */
 .contact {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -702,10 +705,10 @@ a:active {
 }
 .parent-container img{
   height: 200px;
-  width: auto;
+  width: 70%;
   margin: 0;
   margin-bottom: 0;
-  position: relative;
+  position: static;
   top: 35px;
 }
 .contact h3{
@@ -751,7 +754,7 @@ a:active {
   header {
     display: block;
     padding: 1rem 5rem;
-    gap: 8rem;
+    gap: 2rem;
   }
 
   #menu-icon {
@@ -774,7 +777,8 @@ a:active {
     position: absolute;
     top: 100%;
     margin-top: 1rem;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     padding: 1rem;
     color: white;
     visibility: hidden;
