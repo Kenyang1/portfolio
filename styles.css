@@ -704,12 +704,12 @@ a:active {
   align-items: center;
 }
 .parent-container img{
-  height: 200px;
-  width: 70%;
-  margin: 0;
-  margin-bottom: 0;
-  position: static;
-  top: 35px;
+  width: 50%;                /* Scales with container */
+  max-width: 250px;          /* Don't let it get too huge */
+  height: auto;              /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto;
+  margin-top: -50px;
 }
 .contact h3{
   font-size: 1.5rem;
