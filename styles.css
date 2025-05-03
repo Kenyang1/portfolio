@@ -677,8 +677,9 @@ a:active {
 }
 .email-btn {
   background-color: white;
-  padding: 2rem; 
-  width: auto; 
+  padding: 1.2rem 2rem; /* (You can reduce padding to make it less bulky) */
+  width: fit-content;
+  max-width: 90%;   /* Prevents overflow on tiny screens */
   cursor: pointer;
   border: 2px solid black;
   border-radius: 20px;
@@ -687,11 +688,10 @@ a:active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0;
-  margin-bottom: 3%;
+  margin: 0 auto 3%; /* Centers it and gives bottom space */
   box-shadow: 1px 2px black;
-
 }
+
 .email-btn #email {
   font-size: 2rem; 
   color: #0101016a;
@@ -784,6 +784,12 @@ a:active {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .parent-container img {
+      margin-top: 30px; /* or whatever number looks good */
+  }
 }
 
 
