@@ -693,7 +693,7 @@ a:active {
 }
 
 .email-btn #email {
-  font-size: 2rem; 
+  font-size: 1rem; 
   color: #0101016a;
   position: relative;
 }
@@ -788,7 +788,7 @@ a:active {
 
 @media (max-width: 600px) {
   .parent-container img {
-      margin-top: 30px; /* or whatever number looks good */
+      margin-top: 40px; /* or whatever number looks good */
   }
 }
 
