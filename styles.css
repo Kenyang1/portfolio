@@ -705,24 +705,24 @@ a:active {
   position: relative;
   margin-top: 140px;
 }
-.parent-container img{
-  width: 50%;                /* Scales with container */
-  max-width: 250px;          /* Don't let it get too huge */
-  height: auto;              /* Maintain aspect ratio */
+.parent-container img {
+  width: 45%;
+  max-width: 250px;
+  height: auto;
   display: block;
   margin: 0 auto;
-
-  width: 45%;          /* Size relative to the container */
-
-  bottom: 50px;        /* Push it down to "sit" on button */
   position: absolute;
+  bottom: 50px;
 }
+
 .contact h3{
   font-size: 1.5rem;
   font-weight: 500;
   opacity: 0.8;
   text-align: center;
 }
+
+
 
 @media(max-width:1280px) {
   .header {
@@ -738,22 +738,34 @@ a:active {
   }
 }
 
+@media (min-width: 1024px) {
+  .parent-container img {
+    width: 220px;
+    bottom: 65px;
+  }
+}
+
+
 @media(max-width:768px) {
-  header {
-    gap: 1rem;
-    padding: 1rem 1rem;
+    header {
+      gap: 1rem;
+      padding: 1rem 1rem;
+    }
+    header .visit-btn {
+      display: none;
+    }
+    .about-section .container {
+      flex-direction: column;
+    }
+    
+    header .logo {
+      font-size: 1rem;
+    }
+    .parent-container img {
+      width: 200px;         /* Set a fixed width for desktop */
+      bottom: 60px;         /* Adjust to sit on the button */
+      max-width: none;      /* Let it grow a bit more if needed */
   }
-  header .visit-btn {
-    display: none;
-  }
-  .about-section .container {
-    flex-direction: column;
-  }
-  
-  header .logo {
-    font-size: 1rem;
-  }
-  
 }
 
 @media (max-width: 600px) {
