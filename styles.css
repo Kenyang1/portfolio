@@ -666,7 +666,9 @@ a:active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 100px; /* for breathing room at bottom */}
+  padding-bottom: 100px; 
+
+}
 
 .contact h1{
   margin-bottom: 20px;
@@ -703,14 +705,14 @@ a:active {
   align-items: center;
   position: relative;
 }
+
 /* Pikachu image setup */
 .parent-container img {
-  width: 180px;         /* Nice default size for mobile */
+  width: 180px;         
   height: auto;
   display: block;
   position: absolute;
-  bottom: 60px;         /* Makes it "sit" on the button */
-  z-index: 1; /* 👈 Ensures Pikachu stays inside its section */
+  bottom: 60px;         
 
 }
 
@@ -721,6 +723,9 @@ a:active {
   opacity: 0.8;
   text-align: center;
 }
+
+
+
 
 
 
@@ -746,22 +751,26 @@ a:active {
   }
 
   .parent-container img {
+    padding-top: 100px;
     margin-top: 50px;
     width: 220px;
-    bottom: 100px; /* lift a bit more for desktop */
+    bottom: 80px; 
   }
+
+
 }
 
 @media (min-width: 1024px) {
   .parent-container {
-    margin-top: 120px;  /* ✅ Adds more breathing room on desktop */
+    margin-top: 120px; 
   }
 }
 
 @media (min-width: 1024px) {
-  .contact {
-    padding-top: 180px; /* ✅ More spacing for desktop only */
+  .contact  {
+    padding-top: 180px;
   }
+
 }
 
 
@@ -782,12 +791,12 @@ a:active {
     }
 
     .parent-container {
-      margin-top: 50px;
+      margin-top: 60px;
     }
 
     .parent-container img {
-      width: 180px;         /* Set a fixed width for desktop */
-      bottom: 50px;         /* Adjust to sit on the button */
+      width: 180px; 
+      bottom: 60px;      
   }
 }
 
