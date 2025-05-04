@@ -673,13 +673,15 @@ a:active {
   margin-bottom: 1%;
   font-size: 1.5rem;
   font-size: 2rem;
-  padding-bottom: 12px;
+  padding-bottom: 15%;
 }
+
+/* Email button */
 .email-btn {
   background-color: white;
-  padding: 1.2rem 2rem; /* (You can reduce padding to make it less bulky) */
+  padding: 1.2rem 2rem;
   width: fit-content;
-  max-width: 90%;   /* Prevents overflow on tiny screens */
+  max-width: 90%;
   cursor: pointer;
   border: 2px solid black;
   border-radius: 20px;
@@ -688,7 +690,7 @@ a:active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 auto 3%; /* Centers it and gives bottom space */
+  margin: 0 auto 3%;
   box-shadow: 1px 2px black;
 }
 
@@ -700,19 +702,17 @@ a:active {
 .parent-container {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
   align-items: center;
   position: relative;
-  margin-top: 140px;
+  margin-top: 100px;
 }
+/* Pikachu image setup */
 .parent-container img {
-  width: 45%;
-  max-width: 250px;
+  width: 180px;         /* Nice default size for mobile */
   height: auto;
   display: block;
-  margin: 0 auto;
   position: absolute;
-  bottom: 50px;
+  margin-bottom: 8px;         /* Makes it "sit" on the button */
 }
 
 .contact h3{
@@ -762,9 +762,8 @@ a:active {
       font-size: 1rem;
     }
     .parent-container img {
-      width: 200px;         /* Set a fixed width for desktop */
-      bottom: 60px;         /* Adjust to sit on the button */
-      max-width: none;      /* Let it grow a bit more if needed */
+      width: 220px;         /* Set a fixed width for desktop */
+      bottom: 50px;         /* Adjust to sit on the button */
   }
 }
 
@@ -804,12 +803,6 @@ a:active {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  .parent-container img {
-      margin-top: 47px; /* or whatever number looks good */
-  }
-}
-
 
   .nav-links li {
     margin-top: 1.5rem;
@@ -826,5 +819,16 @@ a:active {
 
   header .logo {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .parent-container {
+      margin-top: 80px; /* Slightly closer on small screens */
+    }
+  
+    .parent-container img {
+      width: 160px;     /* Shrink for small phones */
+      bottom: 40px;
+    }
   }
 }
