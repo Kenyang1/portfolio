@@ -666,14 +666,12 @@ a:active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 10%;
+  padding-bottom: 100px; /* for breathing room at bottom */}
 
-}
 .contact h1{
-  margin-bottom: 1%;
-  font-size: 1.5rem;
+  margin-bottom: 20px;
   font-size: 2rem;
-  padding-bottom: 15%;
+  padding-bottom: 100px;
 }
 
 /* Email button */
@@ -704,7 +702,6 @@ a:active {
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-top: 100px;
 }
 /* Pikachu image setup */
 .parent-container img {
@@ -712,10 +709,13 @@ a:active {
   height: auto;
   display: block;
   position: absolute;
-  margin-bottom: 8px;         /* Makes it "sit" on the button */
+  bottom: 60px;         /* Makes it "sit" on the button */
+  z-index: 1; /* 👈 Ensures Pikachu stays inside its section */
+
 }
 
 .contact h3{
+  padding-top: 50px;
   font-size: 1.5rem;
   font-weight: 500;
   opacity: 0.8;
@@ -738,10 +738,29 @@ a:active {
   }
 }
 
+/* Responsive tweaks */
 @media (min-width: 1024px) {
+
+  .parent-container {
+    margin-top: 100px;
+  }
+
   .parent-container img {
+    margin-top: 50px;
     width: 220px;
-    bottom: 65px;
+    bottom: 100px; /* lift a bit more for desktop */
+  }
+}
+
+@media (min-width: 1024px) {
+  .parent-container {
+    margin-top: 120px;  /* ✅ Adds more breathing room on desktop */
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    padding-top: 180px; /* ✅ More spacing for desktop only */
   }
 }
 
@@ -761,8 +780,13 @@ a:active {
     header .logo {
       font-size: 1rem;
     }
+
+    .parent-container {
+      margin-top: 50px;
+    }
+
     .parent-container img {
-      width: 220px;         /* Set a fixed width for desktop */
+      width: 180px;         /* Set a fixed width for desktop */
       bottom: 50px;         /* Adjust to sit on the button */
   }
 }
@@ -823,12 +847,12 @@ a:active {
 
   @media (max-width: 600px) {
     .parent-container {
-      margin-top: 80px; /* Slightly closer on small screens */
+      margin-top: 40px;
     }
   
     .parent-container img {
-      width: 160px;     /* Shrink for small phones */
-      bottom: 40px;
+      width: 160px;
+      bottom: 50px;
     }
   }
 }
