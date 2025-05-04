@@ -702,6 +702,8 @@ a:active {
   flex-direction: column;
   row-gap: 10px;
   align-items: center;
+  position: relative;
+  margin-top: 140px;
 }
 .parent-container img{
   width: 50%;                /* Scales with container */
@@ -709,7 +711,11 @@ a:active {
   height: auto;              /* Maintain aspect ratio */
   display: block;
   margin: 0 auto;
-  margin-bottom: -12px;
+
+  width: 45%;          /* Size relative to the container */
+
+  bottom: 50px;        /* Push it down to "sit" on button */
+  position: absolute;
 }
 .contact h3{
   font-size: 1.5rem;
