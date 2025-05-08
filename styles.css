@@ -179,6 +179,7 @@ li a:hover::before {
   border: 3px solid black;
   max-width: 800px; 
   width: 90%; 
+  animation: heroPopIn 0.6s cubic-bezier(.4,2,.6,1);
 }
 .about-section {
   position: relative;
@@ -386,7 +387,12 @@ li a:hover::before {
   background-color: black;
   box-shadow: 0.5px 4px 0 rgb(249, 249, 249);
   border-radius: 5px;
-  
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s cubic-bezier(.4,2,.6,1);
+}
+.skills-section .cells .cell:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+  z-index: 2;
 }
 .skills-section .cells .cell img {
   height: 50px;
@@ -476,6 +482,13 @@ li a:hover::before {
   box-shadow: 3px 4px 0px hsl(0, 0%, 0%);
   padding: 20px;
   flex-grow: 1;
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s cubic-bezier(.4,2,.6,1);
+}
+
+.experience-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+  z-index: 2;
 }
 
 .header {
@@ -575,11 +588,13 @@ li a:hover::before {
   border: 3px solid black;
   box-shadow: 0.5px 4px 0 black;
   cursor: pointer;
-  transition: ease-in-out;
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s cubic-bezier(.4,2,.6,1);
 }
 
-.project-card:hover{
-  transform: translateY(-10px)scale(1.02);
+.project-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+  z-index: 2;
 }
 .project-card img{
   width: 100%;           /* full width of the card */
@@ -864,4 +879,153 @@ a:active {
       bottom: 50px;
     }
   }
+
+  .mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    background: rgba(255,255,255,0.92); /* semi-transparent */
+    border-radius: 1.5rem;
+    box-shadow: 4px 6px 0 #000;
+    border: 3px solid #000;
+    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+    z-index: 2000;
+    min-width: 220px;
+    max-width: 90vw;
+    width: 260px;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), opacity 0.25s;
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
+  .mobile-menu.active {
+    display: block;
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+    animation: dropdownFadeIn 0.32s cubic-bezier(.4,2,.6,1);
+    pointer-events: auto;
+  }
+  .mobile-menu.closing {
+    display: block;
+    opacity: 0;
+    transform: translateX(-50%) scaleY(0.7) translateY(-30px);
+    transition: opacity 0.32s cubic-bezier(.4,2,.6,1), transform 0.32s cubic-bezier(.4,2,.6,1);
+    pointer-events: none;
+  }
+  .mobile-menu .close-btn {
+    display: block;
+    margin: 0 auto -1.5rem auto;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    box-shadow: 2px 3px 0 #000;
+    position: relative;
+    top: -30px;
+    z-index: 2001;
+    cursor: pointer;
+    opacity: 0.95;
+  }
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .mobile-menu li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.85);
+    border: 2.5px solid #000;
+    border-radius: 1rem;
+    box-shadow: 2px 3px 0 #000;
+    margin: 0.7rem 0;
+    padding: 0.7rem 0.7rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+  }
+  .icon-box {
+    background: #ede7fe;
+    color: #9381ff;
+    border-radius: 0.7rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  .menu-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000;
+  }
+  /* Hide default nav-links on mobile */
+  .nav-links {
+    display: none !important;
+  }
+}
+
+/* Remove underline effect for all nav links */
+li a:before,
+li a:hover::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Add pop animation for nav links and mobile menu links */
+li a,
+.mobile-menu li a {
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1);
+}
+
+li a:hover,
+.mobile-menu li a:hover {
+  transform: scale(1.08);
+  z-index: 1;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@keyframes dropdownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scaleY(0.7) translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scaleY(1) translateY(0);
+  }
+}
+
+@keyframes heroPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile-menu.active {
+    display: block;
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+    animation: dropdownFadeIn 0.32s cubic-bezier(.4,2,.6,1);
+  }
+}
+
+.hero-section {
+  animation: heroPopIn 0.6s cubic-bezier(.4,2,.6,1);
 }
