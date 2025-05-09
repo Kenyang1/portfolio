@@ -1089,3 +1089,15 @@ a, button, .btn, .visit-btn, #menu-icon, .socials i, .parent-container img,
 input, textarea {
   cursor: text;
 }
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0;
+  background: #efd9c0;
+  color: #222;
+  font-size: 1.1rem;
+  font-family: inherit;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+}
