@@ -6,6 +6,7 @@
   text-decoration: none;
   scroll-behavior: smooth;
   list-style: none;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23c2dbf7" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
 }
 
 @font-face {
@@ -756,8 +757,13 @@ a:active {
   height: auto;
   display: block;
   position: absolute;
-  bottom: 60px;         
+  bottom: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
 
+.parent-container img:hover {
+  transform: scale(1.05);
 }
 
 .contact h3{
@@ -1069,4 +1075,17 @@ li a:hover,
     max-width: 120px;
     font-size: 1rem;
   }
+}
+
+/* Keep pointer cursor for clickable elements */
+a, button, .btn, .visit-btn, #menu-icon, .socials i, .parent-container img, 
+.project-card, .experience-box, .about-card, .hero-section, 
+.skills-section .cells .cell, .mobile-menu, .mobile-menu li,
+.nav-links li a, .logo, .email-btn, #resume-btn {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23c2dbf7" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), pointer;
+}
+
+/* Text cursor for input fields */
+input, textarea {
+  cursor: text;
 }
