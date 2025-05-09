@@ -920,7 +920,7 @@ a:active {
     top: 70px;
     left: 50%;
     transform: translateX(-50%) scaleY(0);
-    background: rgba(255,255,255,0.92); /* semi-transparent */
+    background: rgba(255,255,255,0.92); 
     border-radius: 1.5rem;
     box-shadow: 4px 6px 0 #000;
     border: 3px solid #000;
@@ -933,6 +933,7 @@ a:active {
     opacity: 0;
     display: none;
     pointer-events: none;
+    margin-top: 55px; 
   }
   .mobile-menu.active {
     display: block;
@@ -1001,13 +1002,12 @@ a:active {
     font-size: 1.1rem;
     color: #000;
   }
-  /* Hide default nav-links on mobile */
   .nav-links {
     display: none !important;
   }
 }
 
-/* Remove underline effect for all nav links */
+
 li a:before,
 li a:hover::before {
   display: none !important;
