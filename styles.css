@@ -1163,7 +1163,7 @@ input, textarea {
   width: 70px;
   height: auto;
   position: absolute;
-  top: -60px;
+  top: -28px;
   left: 0;
   transition: left 0.1s linear;
   z-index: 2;
