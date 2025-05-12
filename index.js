@@ -17,18 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const pikachuImg = document.getElementById("pikachu-img");
   const pikachuSound = document.getElementById("pikachu-sound");
 
-  pikachuImg.addEventListener("click", () => {
-
-
-
-    pikachuSound.currentTime = 0;
-    pikachuSound.play();
-    
-    pikachuImg.style.transform = "scale(1.1)";
-    setTimeout(() => {
-      pikachuImg.style.transform = "scale(1)";
-    }, 200);
-  });
+  if (pikachuImg && pikachuSound) {
+    pikachuImg.addEventListener("click", () => {
+      pikachuSound.currentTime = 0;
+      pikachuSound.play();
+      pikachuImg.style.transform = "scale(1.1)";
+      setTimeout(() => {
+        pikachuImg.style.transform = "scale(1)";
+      }, 200);
+    });
+  }
 });
 
 window.addEventListener('load', function() {
@@ -61,8 +59,12 @@ window.addEventListener('load', function() {
           whiteFade.classList.add('active');
           setTimeout(() => {
             whiteFade.classList.add('fade-out');
-            loader.style.opacity = 0;
-            setTimeout(() => loader.style.display = 'none', 700);
+            whiteFade.addEventListener('transitionend', (e) => {
+              if (e.propertyName === 'opacity') {
+                whiteFade.style.display = 'none';
+              }
+            }, { once: true });
+            loader.style.display = 'none';
           }, 500);
         }, 700);
       }
