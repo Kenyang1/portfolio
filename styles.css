@@ -1213,7 +1213,7 @@ input, textarea {
   background: white;
   opacity: 0;
   pointer-events: none;
-  z-index: 10000; 
+  z-index: 99999;
   transition: opacity 0.5s;
 }
 .white-fade.active {
