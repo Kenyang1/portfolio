@@ -37,23 +37,30 @@ window.addEventListener('load', function() {
   const pikachuGif = document.getElementById('pikachu-loader-gif');
   const barContainer = document.querySelector('.loader-bar-bg');
   const barWidth = barContainer.offsetWidth - pikachuGif.offsetWidth;
+  const pikachuStart = -40;
   let progress = 0;
   const duration = 2000; 
   const interval = 20;
   const steps = duration / interval;
 
-  const animate = setInterval(() => {
-    progress++;
-    const percent = Math.min(progress / steps, 1);
-    barFill.style.width = (percent * 100) + '%';
-    pikachuGif.style.left = (percent * barWidth) + 'px';
-    if (percent >= 1) {
-      clearInterval(animate);
-      pikachuGif.style.animation = 'runOutFade 0.7s forwards';
-      setTimeout(() => {
-        loader.style.opacity = 0;
-        setTimeout(() => loader.style.display = 'none', 400);
-      }, 700);
-    }
-  }, interval);
+  pikachuGif.classList.add('pop-in');
+
+  setTimeout(() => {
+    pikachuGif.classList.remove('pop-in');
+    pikachuGif.style.opacity = 1;
+    const animate = setInterval(() => {
+      progress++;
+      const percent = Math.min(progress / steps, 1);
+      barFill.style.width = (percent * 100) + '%';
+      pikachuGif.style.left = (pikachuStart + percent * (barWidth - pikachuStart)) + 'px';
+      if (percent >= 1) {
+        clearInterval(animate);
+        pikachuGif.style.animation = 'runOutFade 0.7s forwards';
+        setTimeout(() => {
+          loader.style.opacity = 0;
+          setTimeout(() => loader.style.display = 'none', 400);
+        }, 700);
+      }
+    }, interval);
+  }, 500);
 });

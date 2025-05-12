@@ -1164,9 +1164,32 @@ input, textarea {
   height: auto;
   position: absolute;
   top: -28px;
-  left: 0;
+  left: -40px;
+  opacity: 0;
   transition: left 0.1s linear;
   z-index: 2;
+}
+
+@keyframes pikachuPopIn {
+  0% {
+    opacity: 0;
+    left: -80px;
+    transform: scale(0.7);
+  }
+  80% {
+    opacity: 1;
+    left: -40px;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    left: -40px;
+    transform: scale(1);
+  }
+}
+
+#pikachu-loader-gif.pop-in {
+  animation: pikachuPopIn 0.5s cubic-bezier(.4,2,.6,1) forwards;
 }
 
 @keyframes fadeOut {
