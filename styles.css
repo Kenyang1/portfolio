@@ -1101,3 +1101,83 @@ input, textarea {
   margin-top: 0;
   letter-spacing: 0.01em;
 }
+
+#loader {
+  position: fixed;
+  z-index: 9999;
+  background: #efd9c0;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s;
+}
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #9381ff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.loader-gif {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.loader-bar-container {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loader-bar-bg {
+  width: 100%;
+  height: 18px;
+  background: #f3f3f3;
+  border-radius: 10px;
+  border: 2px solid #9381ff;
+  margin-top: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0.5px 4px 0 black;
+}
+.loader-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #9381ff 60%, #efd9c0 100%);
+  border-radius: 10px 0 0 10px;
+  transition: width 0.1s linear;
+}
+#pikachu-loader-gif {
+  width: 70px;
+  height: auto;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  transition: left 0.1s linear;
+  z-index: 2;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes runOutFade {
+  to {
+    left: 110%;
+    opacity: 0;
+  }
+}
