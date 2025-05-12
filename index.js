@@ -36,6 +36,7 @@ window.addEventListener('load', function() {
   const barFill = document.getElementById('loader-bar-fill');
   const pikachuGif = document.getElementById('pikachu-loader-gif');
   const barContainer = document.querySelector('.loader-bar-bg');
+  const whiteFade = document.getElementById('white-fade');
   const barWidth = barContainer.offsetWidth - pikachuGif.offsetWidth;
   const pikachuStart = -40;
   let progress = 0;
@@ -57,8 +58,12 @@ window.addEventListener('load', function() {
         clearInterval(animate);
         pikachuGif.style.animation = 'runOutFade 0.7s forwards';
         setTimeout(() => {
-          loader.style.opacity = 0;
-          setTimeout(() => loader.style.display = 'none', 400);
+          whiteFade.classList.add('active');
+          setTimeout(() => {
+            whiteFade.classList.add('fade-out');
+            loader.style.opacity = 0;
+            setTimeout(() => loader.style.display = 'none', 700);
+          }, 500);
         }, 700);
       }
     }, interval);
