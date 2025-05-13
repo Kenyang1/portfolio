@@ -217,7 +217,7 @@ li a:hover::before {
   height: auto;
   width: auto;
   border-radius: 10px;
-  box-shadow: 0.5px 4px 0 black;
+  box-shadow: 10px 10px black;
   object-fit: contain;
   transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s cubic-bezier(.4,2,.6,1);
 }
