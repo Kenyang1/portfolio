@@ -491,53 +491,128 @@ header {
 }
 
 /* Timeline Styles */
-.timeline {
-  width: 100%;
-  max-width: 800px;
-  position: relative;
+@media (min-width: 1024px) {
+  .experience-section {
+    border-radius: 16px;
+  }
+  .experience-section .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    background: transparent;
+  }
+  .timeline-bar {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 12px;
+    height: 100%;
+    background: #000;
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 6px;
+  }
+  .timeline-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    min-height: 0;
+    z-index: 2;
+  }
+  .timeline-item.left { justify-content: flex-start; }
+  .timeline-item.right { justify-content: flex-end; }
+  .timeline-item .experience-card {
+    width: 45%;
+    margin: 1.5rem 0;
+    position: relative;
+    z-index: 2;
+  }
+  .timeline-item.left .experience-card { margin-right: 54%; margin-left: 0; }
+  .timeline-item.right .experience-card { margin-left: 54%; margin-right: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border: 4px solid #000;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .timeline-item::after { display: none !important; }
+  .timeline-node {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border: 4px solid #000;
+    border-radius: 50%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .timeline-node i.fa-briefcase {
+    font-size: 2.5rem;
+    color: #000;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.timeline-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 50px;
-  position: relative;
-}
+/* On mobile, keep the stacked layout */
+@media (max-width: 1023px) {
+  .experience-section .timeline {
+    display: block;
+    position: static;
+    max-width: 100vw;
+    padding: 0;
+  }
 
-.timeline-item .icon-container {
-  flex-shrink: 0;
-  margin-right: 15px;
-}
+  .timeline-bar,
+  .timeline-item::before,
+  .timeline-item::after {
+    display: none !important;
+  }
 
-.timeline-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .timeline-item,
+  .timeline-item .experience-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
 
-.timeline-icon img {
-  width: 20px;
-  height: 20px;
-}
+  .timeline-item.left,
+  .timeline-item.right {
+    justify-content: center;
+  }
 
-.timeline-item:before {
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 20px;
-  width: 2px;
-  height: 100%;
-  background-color: #000;
-  z-index: -1;
-}
-
-.timeline-item:last-child:before {
-  display: none;
+  /* Add a small gap between experience cards on mobile */
+  .timeline-item {
+    margin-bottom: 1.1rem !important;
+  }
+  .timeline-item:last-child {
+    margin-bottom: 0 !important;
+  }
+  .timeline-node {
+    display: none !important;
+  }
 }
 
 /* Experience Card */
