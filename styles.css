@@ -115,32 +115,57 @@ header {
   width: 100%;
 }
 .visit-btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid black;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   text-wrap: nowrap;
-  box-shadow: 1px 2px black;
+  box-shadow: 0.5px 4px 0 black;
+  background: white;
+  transition: all 0.3s ease;
+}
+.visit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
 }
 .visit-btn a {
   color: #000;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  transition: 0.3 ease-in-out;
-
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  background: white;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0.5px 4px 0 black;
   width: 120px;
   height: auto;
-  border: none;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  text-wrap: nowrap;
-  background-color: #e9e9e9;
-  box-shadow: 1px 2px black;
+}
+.btn:hover {
+  background: #c2dbf7;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+}
+.btn a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .divider {
   display: flex;
@@ -150,11 +175,14 @@ header {
   gap: 15px;
   margin: 15px;
   margin-bottom: 10px;
-
-
 }
 #resume-btn {
   background-color: #d2f3d5;
+}
+#resume-btn:hover {
+  background-color: #d2f3d5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
 }
 #pfp {
   height: 300px;
@@ -607,10 +635,22 @@ header {
   margin-left: 10%;
   margin-right: 10%;
 }
-.project-grid{
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  margin-bottom: 2rem;
+  min-height: 0;
+  transition: all 0.3s ease;
+  justify-content: center;
+}
+
+.project-grid:empty {
+  display: none;
+}
+
+.project-grid:empty + .contact {
+  margin-top: 0;
 }
 
 .project-card {
@@ -626,7 +666,11 @@ header {
   border: 3px solid black;
   box-shadow: 0.5px 4px 0 black;
   cursor: pointer;
-  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s cubic-bezier(.4,2,.6,1);
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+  height: fit-content;
+  display: block;
 }
 
 .project-card:hover {
@@ -662,32 +706,17 @@ header {
   font-weight: 500;
   opacity: 0.8;
 }
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
-.btn:hover {
-  background-color: #c2dbf7;
+#live-demo {
+  background: white;
 }
-
-.btn:visited {
-  color: #000; 
-}
-
-.btn:active {
-  color: #000; 
-}
-
-a:visited {
-  color: #000;
-}
-a:active {
+#live-demo:hover {
+  background: #c2dbf7;
   color: #000;
 }
 
@@ -1285,4 +1314,86 @@ input, textarea {
 @keyframes blink {
   from, to { border-color: transparent }
   50% { border-color: #9381ff }
+}
+
+/* Filter Buttons */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.filter-btn {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0.5px 4px 0 black;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+}
+
+.filter-btn.active {
+  background: #9381ff;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.tech-tag {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #000;
+  transition: all 0.3s ease;
+  box-shadow: 0.5px 4px 0 black;
+}
+
+.tech-tag:hover {
+  background: #9381ff;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+}
+
+/* Project Card Animation */
+.project-card.hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: minmax(300px, 600px);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-container {
+    margin: 1.5rem 0;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }

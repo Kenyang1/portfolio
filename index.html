@@ -413,12 +413,27 @@
   <section class="projects" id="projects">
     <h3>Check Out My</h3>
     <h1>Projects</h1>
+    
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="game">Game Development</button>
+      <button class="filter-btn" data-filter="ai">AI/ML</button>
+    </div>
+
     <div class="project-grid">
       <!-- AspireAI Project -->
-      <div class="project-card">
+      <div class="project-card" data-category="ai web">
         <img src="images/AspireAI.png" alt="AspireAI">
         <h3 class="section-title">AspireAI</h3>
         <p>AI-powered career path discovery tool. Built with JavaScript and Next.js.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">AI</span>
+        </div>
         <div class="btn-group">
           <div class="btn" id="live-demo">
             <a href="https://aspire-ai-rho.vercel.app/auth/signup" target="_blank">Live Demo</a>
@@ -430,107 +445,138 @@
       </div>
   
       <!-- Pokedex Project -->
-      <div class="project-card">
+      <div class="project-card" data-category="web">
         <img src="images/pokedex.jpg" alt="Pokedex">
         <h3 class="section-title">Pokedex</h3>
         <p>A simple Pokedex application built with JavaScript. View all Pokemon details!</p>
+        <div class="tech-stack">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+        </div>
         <div class="btn-group">
-          <div class="btn" id="live-demo"><a href="https://pokedex-one-blue.vercel.app/" target="_blank">Live Demo</a>
-          </div>
+          <div class="btn" id="live-demo"><a href="https://pokedex-one-blue.vercel.app/" target="_blank">Live Demo</a></div>
           <div class="btn" id="git-btn">
             <a href="https://github.com/Kenyang1/pokedex" target="_blank">Github</a>
           </div>
         </div>
       </div>
   
-<!-- Sports Management Project -->
-<div class="project-card">
-  <img src="images/1182.jpg" alt="Sports Management Project">
-  <h3 class="section-title">Sports Management Project</h3>
-  <p>Manage sports teams and events. A dynamic web app built with JavaScript.</p>
-  <div class="btn-group">
-    <div class="btn" id="git-btn">
-      <a href="https://github.com/Kenyang1/Sports-Management-Project" target="_blank">Github</a>
+      <!-- Sports Management Project -->
+      <div class="project-card" data-category="web">
+        <img src="images/1182.jpg" alt="Sports Management Project">
+        <h3 class="section-title">Sports Management Project</h3>
+        <p>Manage sports teams and events. A dynamic web app built with JavaScript.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+        </div>
+        <div class="btn-group">
+          <div class="btn" id="git-btn">
+            <a href="https://github.com/Kenyang1/Sports-Management-Project" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grocery Tracking Program -->
+      <div class="project-card" data-category="desktop">
+        <img src="images/grocery-tracking.jpg" alt="Grocery Tracking Program">
+        <h3 class="section-title">Grocery Tracking Program</h3>
+        <p>A C++ application for tracking grocery expenses and inventory.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">OOP</span>
+        </div>
+        <div class="btn-group">
+          <div class="btn" id="git-btn">
+            <a href="https://github.com/Kenyang1/Grocery-Tracking-Program" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Website Project -->
+      <div class="project-card" data-category="web">
+        <img src="images/news-website.jpg" alt="News Website">
+        <h3 class="section-title">News Website</h3>
+        <p>A news website template built using JavaScript.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+        </div>
+        <div class="btn-group">
+          <div class="btn" id="git-btn">
+            <a href="https://github.com/Kenyang1/news-website" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PacMan Game Project -->
+      <div class="project-card" data-category="game">
+        <img src="images/pacman.png" alt="PacMan Game">
+        <h3 class="section-title">PacMan Game</h3>
+        <p>A simple PacMan game built in Java using basic game mechanics.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">Game Dev</span>
+        </div>
+        <div class="btn-group">
+          <div class="btn" id="git-btn">
+            <a href="https://github.com/Kenyang1/PacMan" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arduino Alien Communication Device Project -->
+      <div class="project-card" data-category="hardware">
+        <img src="images/arduino-alien.jpg" alt="Arduino Alien Communication Device">
+        <h3 class="section-title">Arduino Alien Communication Device</h3>
+        <p>An Arduino-based project for creating an alien communication device.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Arduino</span>
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">Hardware</span>
+        </div>
+        <div class="btn-group">
+          <div class="btn" id="git-btn">
+            <a href="https://github.com/Kenyang1/Arduino-Alien-Communication-Device" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expense Tracker Project -->
+      <div class="project-card" data-category="desktop">
+        <img src="images/expense-tracker.jpg" alt="Expense Tracker">
+        <h3 class="section-title">Expense Tracker</h3>
+        <p>Python app for tracking monthly expenses and budgeting.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">SQLite</span>
+        </div>
+        <div class="btn-group">
+          <div class="btn" id="git-btn">
+            <a href="https://github.com/Kenyang1/Expense_Tracker" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- WebFitness Project -->
+      <div class="project-card" data-category="desktop">
+        <img src="images/Webfitness.png" alt="WebFitness">
+        <h3 class="section-title">WebFitness</h3>
+        <p>A fitness tracker app built in C# to monitor daily health activities.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">.NET</span>
+        </div>
+        <div class="btn-group">
+          <div class="btn" id="git-btn">
+            <a href="https://github.com/Kenyang1/WebFitness" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
-
-<!-- Grocery Tracking Program -->
-<div class="project-card">
-  <img src="images/grocery-tracking.jpg" alt="Grocery Tracking Program">
-  <h3 class="section-title">Grocery Tracking Program</h3>
-  <p>A C++ application for tracking grocery expenses and inventory.</p>
-  <div class="btn-group">
-    <div class="btn" id="git-btn">
-      <a href="https://github.com/Kenyang1/Grocery-Tracking-Program" target="_blank">Github</a>
-    </div>
-  </div>
-</div>
-
-<!-- News Website Project -->
-<div class="project-card">
-  <img src="images/news-website.jpg" alt="News Website">
-  <h3 class="section-title">News Website</h3>
-  <p>A news website template built using JavaScript.</p>
-  <div class="btn-group">
-    <div class="btn" id="git-btn">
-      <a href="https://github.com/Kenyang1/news-website" target="_blank">Github</a>
-    </div>
-  </div>
-</div>
-
-<!-- PacMan Game Project -->
-<div class="project-card">
-  <img src="images/pacman.png" alt="PacMan Game">
-  <h3 class="section-title">PacMan Game</h3>
-  <p>A simple PacMan game built in Java using basic game mechanics.</p>
-  <div class="btn-group">
-    <div class="btn" id="git-btn">
-      <a href="https://github.com/Kenyang1/PacMan" target="_blank">Github</a>
-    </div>
-  </div>
-</div>
-
-
-<!-- Arduino Alien Communication Device Project -->
-<div class="project-card">
-  <img src="images/arduino-alien.jpg" alt="Arduino Alien Communication Device">
-  <h3 class="section-title">Arduino Alien Communication Device</h3>
-  <p>An Arduino-based project for creating an alien communication device.</p>
-  <div class="btn-group">
-    <div class="btn" id="git-btn">
-      <a href="https://github.com/Kenyang1/Arduino-Alien-Communication-Device" target="_blank">Github</a>
-    </div>
-  </div>
-</div>
-
-<!-- Expense Tracker Project -->
-<div class="project-card">
-  <img src="images/expense-tracker.jpg" alt="Expense Tracker">
-  <h3 class="section-title">Expense Tracker</h3>
-  <p>Python app for tracking monthly expenses and budgeting.</p>
-  <div class="btn-group">
-    <div class="btn" id="git-btn">
-      <a href="https://github.com/Kenyang1/Expense_Tracker" target="_blank">Github</a>
-    </div>
-  </div>
-</div>
-
-<!-- WebFitness Project -->
-<div class="project-card">
-  <img src="images/Webfitness.png" alt="WebFitness">
-  <h3 class="section-title">WebFitness</h3>
-  <p>A fitness tracker app built in C# to monitor daily health activities.</p>
-  <div class="btn-group">
-    <div class="btn" id="git-btn">
-      <a href="https://github.com/Kenyang1/WebFitness" target="_blank">Github</a>
-    </div>
-  </div>
-</div>
-
-
   </section>
   
   <section class="contact" id="contact">
