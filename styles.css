@@ -252,10 +252,19 @@ header {
 
 .info-box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   gap: 1.5rem;
+  width: 100%;
 }
+
+.info-box .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .info-box h3{
   font-size: 1.5rem;
   font-weight: 500;
@@ -1241,4 +1250,39 @@ input, textarea {
 .linkedin-activity-item,
 .activity-meta {
   display: none;
+}
+
+.typing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  min-height: 2.5rem;
+  width: 100%;
+}
+
+.static-text {
+  font-size: 1.9rem;
+  font-weight: bold;
+  background-color: #9381ff;
+  background-clip: text;
+  color: transparent;
+}
+
+#typing-text {
+  font-size: 1.9rem;
+  font-weight: bold;
+  background-color: #9381ff;
+  background-clip: text;
+  color: transparent;
+  border-right: 3px solid #9381ff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #9381ff }
 }

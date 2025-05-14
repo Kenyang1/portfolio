@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">    
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="Icon" type="image/x-icon" href="/images/letter-k.png">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
   <div class="white-fade" id="white-fade"></div>
@@ -78,11 +79,14 @@
     <img src="images/Abstract Profile Picture.png" alt="pfp" id="pfp">
     <div class="info-box">
       <div class="text">
-        <h3>Hello I'm</h2>
-        <h1>Kenyang</h2>
-        <span>Software Engineer</span>
+        <h3>Hello I'm</h3>
+        <h1>Kenyang</h1>
+        <div class="typing-container">
+          <span class="static-text"></span>
+          <span id="typing-text"></span>
+        </div>
         <p>Driven by an unwavering passion for technology, I am on a mission to reshape the world's landscape, one innovation at a time. Join me in harnessing the boundless potential of technology to create a brighter, more connected future for all.</p>
-    </div>
+      </div>
     </div>
     
 
@@ -554,5 +558,23 @@
     © 2025 Kenyang Lual. All rights reserved.
   </footer>
   <script src="index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const typed = new Typed('#typing-text', {
+        strings: [
+          'Software Engineer',
+          'Problem Solver',
+          'Tech Innovator',
+          'Creative Developer'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        startDelay: 1000,
+        loop: true,
+        showCursor: false
+      });
+    });
+  </script>
 </body>
 </html>
