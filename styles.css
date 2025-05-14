@@ -1680,3 +1680,55 @@ input, textarea {
     font-size: 0.93rem;
   }
 }
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: white;
+  border: 3px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  box-shadow: 0.5px 4px 0 black;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+  background: #c2dbf7;
+}
+
+.back-to-top i {
+  font-size: 1.5rem;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .back-to-top i {
+    font-size: 1.2rem;
+  }
+}
