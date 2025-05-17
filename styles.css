@@ -479,7 +479,7 @@ header {
   flex-direction: column;
   align-items: center;
   margin-top: 150px;
-
+  text-align: center;
 }
 
 .experience-section h1 {
@@ -487,7 +487,42 @@ header {
   font-weight: bold;
   color: #000;
   margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
 
+.experience-section h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+  text-align: center;
+  width: 100%;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 30px 5%;
+  }
+  
+  .experience-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .experience-section h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-480px) {
+  .experience-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .experience-section h3 {
+    font-size: 1.2rem;
+  }
 }
 
 /* Timeline Styles */
@@ -567,7 +602,8 @@ header {
     align-items: center;
     justify-content: center;
   }
-  .timeline-node i.fa-briefcase {
+  .timeline-node i.fa-briefcase,
+  .timeline-node i.fa-graduation-cap {
     font-size: 2.5rem;
     color: #000;
     line-height: 1;
@@ -1730,5 +1766,83 @@ input, textarea {
   
   .back-to-top i {
     font-size: 1.2rem;
+  }
+}
+
+/* Timeline Section Headers */
+.timeline-section-header {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-section-header h2 {
+  display: inline-block;
+  background: #9381ff;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #000;
+  box-shadow: 0.5px 4px 0 black;
+}
+
+/* Timeline Separator */
+.timeline-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.separator-line {
+  height: 2px;
+  background: #9381ff;
+  flex: 1;
+  max-width: 200px;
+}
+
+.separator-icon {
+  width: 50px;
+  height: 50px;
+  background: #9381ff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  box-shadow: 0.5px 4px 0 black;
+}
+
+.separator-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-section-header h2 {
+    font-size: 1.2rem;
+    padding: 0.4rem 1.5rem;
+  }
+
+  .separator-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .separator-icon i {
+    font-size: 1.2rem;
+  }
+
+  .separator-line {
+    max-width: 150px;
   }
 }
