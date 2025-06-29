@@ -531,7 +531,7 @@ header {
     border-radius: 16px;
   }
   .experience-section .timeline {
-    position: relative;
+  position: relative;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -549,12 +549,12 @@ header {
     z-index: 1;
     border-radius: 6px;
   }
-  .timeline-item {
+.timeline-item {
     position: relative;
     width: 100%;
-    display: flex;
+  display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+  align-items: flex-start;
     margin: 0;
     min-height: 0;
     z-index: 2;
@@ -564,7 +564,7 @@ header {
   .timeline-item .experience-card {
     width: 45%;
     margin: 1.5rem 0;
-    position: relative;
+  position: relative;
     z-index: 2;
   }
   .timeline-item.left .experience-card { margin-right: 54%; margin-left: 0; }
@@ -579,7 +579,7 @@ header {
     height: 80px;
     background: #fff;
     border: 4px solid #000;
-    border-radius: 50%;
+  border-radius: 50%;
     z-index: 3;
     box-shadow: none;
     display: flex;
@@ -594,13 +594,13 @@ header {
     transform: translate(-50%, 0);
     width: 80px;
     height: 80px;
-    background: #fff;
+  background: #fff;
     border: 4px solid #000;
     border-radius: 50%;
     z-index: 3;
-    display: flex;
+  display: flex;
     align-items: center;
-    justify-content: center;
+  justify-content: center;
   }
   .timeline-node i.fa-briefcase,
   .timeline-node i.fa-graduation-cap {
@@ -608,7 +608,7 @@ header {
     color: #000;
     line-height: 1;
     display: flex;
-    align-items: center;
+  align-items: center;
     justify-content: center;
   }
 }
@@ -620,7 +620,7 @@ header {
     position: static;
     max-width: 100vw;
     padding: 0;
-  }
+}
 
   .timeline-bar,
   .timeline-item::before,
@@ -642,7 +642,7 @@ header {
   /* Add a small gap between experience cards on mobile */
   .timeline-item {
     margin-bottom: 1.1rem !important;
-  }
+}
   .timeline-item:last-child {
     margin-bottom: 0 !important;
   }
