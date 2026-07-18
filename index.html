@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">    
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="icon" type="image/png" href="images/branding/portfolio-mark.png">
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
@@ -32,7 +31,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <img src="images/ui/menu-icon.png" id="menu-icon" alt="Menu Icon">
-    <button class="visit-btn"><a href="https://github.com/Kenyang1" target="_blank" rel="noopener noreferrer">Visit Github!</button>
+    <button class="visit-btn"><a href="https://github.com/Kenyang1" target="_blank" rel="noopener noreferrer">Visit Github!</a></button>
   </header>
   
   <!-- Mobile Menu Overlay -->
@@ -333,6 +332,8 @@
       <button class="filter-btn" data-filter="mobile">Mobile</button>
       <button class="filter-btn" data-filter="game">Game Development</button>
       <button class="filter-btn" data-filter="ai">AI/ML</button>
+      <button class="filter-btn" data-filter="desktop">Desktop</button>
+      <button class="filter-btn" data-filter="hardware">Hardware</button>
     </div>
 
     <div class="project-grid">
@@ -560,7 +561,7 @@
       <audio id="pikachu-sound" src="audio/pikachu-sound.mp3" preload="auto"></audio>
       <div class="email-btn">
         <i class="fa-solid fa-envelope fa-2xl"></i>
-        <btn id="email" ><a href="mailto:kenyanglual05@gmail.com">kenyanglual05@gmail.com</a></btn>
+        <span id="email"><a href="mailto:kenyanglual05@gmail.com">kenyanglual05@gmail.com</a></span>
       </div>
     </div>
     <div class="socials">
@@ -574,7 +575,7 @@
     
   </section>
   <footer class="footer">
-    © 2025 Kenyang Lual. All rights reserved.
+    © <span id="footer-year">2025</span> Kenyang Lual. All rights reserved.
   </footer>
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <i class="fa-solid fa-arrow-up"></i>

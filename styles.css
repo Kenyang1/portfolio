@@ -101,19 +101,6 @@ header {
   transition: color 0.3s ease;
   position: relative;
 }
-.nav-links li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #9381ff;
-  transition: width 0.3s ease;
-}
-.nav-links li a:hover::after {
-  width: 100%;
-}
 .visit-btn {
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -1749,6 +1736,10 @@ input, textarea {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
   background: #c2dbf7;
+}
+
+.back-to-top.no-hover {
+  pointer-events: none;
 }
 
 .back-to-top i {

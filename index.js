@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Footer copyright year
+  const footerYear = document.getElementById('footer-year');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+
   // Back to Top Button
   const backToTopButton = document.getElementById('back-to-top');
   
@@ -17,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
       top: 0,
       behavior: 'smooth'
     });
+    backToTopButton.blur();
+    backToTopButton.classList.add('no-hover');
+    setTimeout(() => backToTopButton.classList.remove('no-hover'), 300);
   });
 
   const menuIcon = document.getElementById("menu-icon");
