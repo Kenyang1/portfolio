@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meow Management Case Study | Kenyang Lual</title>
-  <meta name="description" content="How I built Meow Management, a chatbot-assisted restaurant operations app with Supabase row-level security, Firebase Auth, and dedicated inventory, tasks, and finance tabs.">
+  <meta name="description" content="How I built Meow Management, a restaurant operations app with a Claude-powered assistant, Supabase authentication and row-level security, and a real multi-tenant team/invite system.">
   <meta name="author" content="Kenyang Lual">
   <link rel="canonical" href="https://www.klual.com/case-studies/meow-management.html">
 
@@ -12,7 +12,7 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.klual.com/case-studies/meow-management.html">
   <meta property="og:title" content="Meow Management Case Study | Kenyang Lual">
-  <meta property="og:description" content="A chatbot-assisted restaurant operations app with Supabase row-level security, Firebase Auth, and dedicated inventory, tasks, and finance tabs.">
+  <meta property="og:description" content="A restaurant operations app with a Claude-powered assistant, Supabase authentication and row-level security, and a real multi-tenant team/invite system.">
   <meta property="og:image" content="https://www.klual.com/images/projects/thumbnails/meow-management-thumbnail.png">
   <meta property="og:site_name" content="Kenyang Lual">
 
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.klual.com/case-studies/meow-management.html">
   <meta name="twitter:title" content="Meow Management Case Study | Kenyang Lual">
-  <meta name="twitter:description" content="A chatbot-assisted restaurant operations app with Supabase row-level security, Firebase Auth, and dedicated inventory, tasks, and finance tabs.">
+  <meta name="twitter:description" content="A restaurant operations app with a Claude-powered assistant, Supabase authentication and row-level security, and a real multi-tenant team/invite system.">
   <meta name="twitter:image" content="https://www.klual.com/images/projects/thumbnails/meow-management-thumbnail.png">
 
   <link rel="stylesheet" href="../styles.css">
@@ -90,8 +90,9 @@
       <div class="tech-stack">
         <span class="tech-tag">React Native</span>
         <span class="tech-tag">Expo</span>
+        <span class="tech-tag">TypeScript</span>
         <span class="tech-tag">Supabase (Postgres + RLS)</span>
-        <span class="tech-tag">Firebase Auth</span>
+        <span class="tech-tag">Claude (Anthropic API)</span>
       </div>
       <div class="btn-group">
         <div class="btn" id="git-btn">
@@ -109,27 +110,27 @@
 
       <div class="case-study-section">
         <h2><i class="fa-solid fa-user-gear"></i> My Role</h2>
-        <p>I built Meow Management's mobile client and backend schema: the Expo/React Native app, the Supabase database and row-level security policies, and Miso, the in-app chatbot that searches inventory and notes.</p>
+        <p>I built Meow Management's mobile client and backend end-to-end: the Expo/React Native app, the Supabase schema and row-level security policies, the multi-tenant restaurant/team model, and Miso, an in-app assistant backed by Claude.</p>
       </div>
 
       <div class="case-study-section">
         <h2><i class="fa-solid fa-diagram-project"></i> Key Technical Decisions</h2>
         <ul>
-          <li><strong>Supabase Postgres with row-level security.</strong> Inventory, tasks, and finance data is scoped per account at the database layer through RLS policies, not just filtered in the UI, so a client-side bug can't leak another account's data.</li>
-          <li><strong>Firebase for auth, Supabase for data.</strong> Firebase handles account sign-up and session state while Supabase, backed by its own migrations and edge functions, owns the operational data &mdash; keeping authentication and application data as separate, purpose-built concerns.</li>
-          <li><strong>Dedicated tabs instead of one dashboard.</strong> Inventory, tasks, finance, and a management log each get their own tab backed by their own Supabase tables, so day-to-day updates map to how a shift actually works instead of competing for space on one screen.</li>
-          <li><strong>Miso as a scoped chatbot, not a general assistant.</strong> The in-app chatbot is built as a fast search layer over existing inventory and notes data, so it only ever answers questions the underlying data can actually support.</li>
+          <li><strong>Supabase for both auth and data.</strong> Row-level security policies key every table &mdash; inventory, finance, tasks, activity log &mdash; to the authenticated user and their restaurant, so the same backend that stores the data also enforces who's allowed to touch it.</li>
+          <li><strong>A real team model, not just a shared login.</strong> <code>restaurants</code>, <code>restaurant_members</code>, and <code>restaurant_invites</code> are separate tables. Invites are token-based, validated against the invited email, expire, and assign a role (owner vs. staff) on acceptance instead of just adding a name to a list.</li>
+          <li><strong>Miso as a genuine Claude-backed assistant.</strong> "Ask Miso" calls Claude through the Anthropic API from a Supabase Edge Function, passing the caller's own RLS-scoped inventory, finance, and task data as context &mdash; and redacts raw user IDs to display names before anything reaches the model.</li>
+          <li><strong>Manager approvals plus an append-only audit trail.</strong> Staff submit finance entries as requests that an owner or manager approves through a SECURITY DEFINER RPC, while an activity log written only by database triggers &mdash; never by clients &mdash; tracks who changed what.</li>
         </ul>
       </div>
 
       <div class="case-study-section">
         <h2><i class="fa-solid fa-bolt"></i> Challenges &amp; Solutions</h2>
-        <p>Low-stock alerts needed to be useful without turning into noise. They're scoped per item on the inventory tab, so a manager sees a flag when something is actually running low instead of getting alerted on every stock change.</p>
+        <p>Two real issues shaped the current data model, both caught by re-reading my own schema rather than a live incident. Early inventory, finance, and log tables shipped with an open "anon full access" policy &mdash; anyone holding the public anon key could read or write any row &mdash; which I replaced with row-level security policies scoped to the authenticated user. Later, once team invites shipped, a <code>current_restaurant_id()</code> helper that assumed one restaurant per user (<code>limit 1</code>) started returning the wrong restaurant for anyone who belonged to two; I fixed it by automatically retiring a user's empty, auto-created solo restaurant the moment they accept an invite to a real team.</p>
       </div>
 
       <div class="case-study-section">
         <h2><i class="fa-solid fa-flag-checkered"></i> Status &amp; What's Next</h2>
-        <p>Meow Management runs end-to-end against a live Supabase backend, with full CRUD across inventory, tasks, and finance, chatbot-assisted search, and an invite flow so more than one team member can access the same restaurant's dashboard.</p>
+        <p>Meow Management runs end-to-end against a live Supabase backend: authentication, inventory/task/finance CRUD, the Claude-powered Miso assistant, manager approvals, an audit trail, and email-based team invites all work today. Low-stock, overdue-task, and approval push notifications are wired through a device-token registry and a dispatch Edge Function.</p>
       </div>
 
       <div class="case-study-cta">

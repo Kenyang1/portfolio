@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuzzUp Case Study | Kenyang Lual</title>
+  <meta name="description" content="How I helped build BuzzUp, a campus events app with QR check-ins, code-based club verification, event-conflict detection, and an automated test suite, built with a two-person team.">
+  <meta name="author" content="Kenyang Lual">
+  <link rel="canonical" href="https://www.klual.com/case-studies/buzz-up.html">
+
+  <!-- Open Graph / Facebook, LinkedIn -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.klual.com/case-studies/buzz-up.html">
+  <meta property="og:title" content="BuzzUp Case Study | Kenyang Lual">
+  <meta property="og:description" content="A campus events app with QR check-ins, code-based club verification, event-conflict detection, and an automated test suite, built with a two-person team.">
+  <meta property="og:image" content="https://www.klual.com/images/projects/thumbnails/buzz-up-thumbnail.png">
+  <meta property="og:site_name" content="Kenyang Lual">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.klual.com/case-studies/buzz-up.html">
+  <meta name="twitter:title" content="BuzzUp Case Study | Kenyang Lual">
+  <meta name="twitter:description" content="A campus events app with QR check-ins, code-based club verification, event-conflict detection, and an automated test suite, built with a two-person team.">
+  <meta name="twitter:image" content="https://www.klual.com/images/projects/thumbnails/buzz-up-thumbnail.png">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="../images/branding/portfolio-mark.png">
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo"><span>Kenyang Lual</span></a>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="../index.html#about-section">About</a></li>
+      <li><a href="../index.html#skills-section">Skills</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <img src="../images/ui/menu-icon.png" id="menu-icon" alt="Menu Icon">
+    <button class="visit-btn"><a href="https://github.com/Kenyang1" target="_blank" rel="noopener noreferrer">Visit Github!</a></button>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li>
+        <a href="../index.html#about-section">
+          <span class="icon-box"><i class="fa-regular fa-address-card"></i></span>
+          <span class="menu-label">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#skills-section">
+          <span class="icon-box"><i class="fa-solid fa-code"></i></span>
+          <span class="menu-label">Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#experience">
+          <span class="icon-box"><i class="fa-solid fa-briefcase"></i></span>
+          <span class="menu-label">Experience</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#projects">
+          <span class="icon-box"><i class="fa-solid fa-diagram-project"></i></span>
+          <span class="menu-label">Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#contact">
+          <span class="icon-box"><i class="fa-solid fa-envelope"></i></span>
+          <span class="menu-label">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <main class="case-study-page">
+    <div class="case-study-nav">
+      <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+    <section class="case-study-hero">
+      <h3>Case Study</h3>
+      <h1>BuzzUp</h1>
+      <p class="tagline">Never miss what's happening on campus.</p>
+      <span class="case-study-status">Live &middot; Adopted by 20+ SNHU Students</span>
+      <div class="tech-stack">
+        <span class="tech-tag">React Native</span>
+        <span class="tech-tag">Expo</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Supabase</span>
+        <span class="tech-tag">Firebase Auth</span>
+        <span class="tech-tag">Vitest</span>
+      </div>
+      <div class="btn-group">
+        <div class="btn" id="git-btn">
+          <a href="https://github.com/3lenavan/Campus-event-notifier-app" target="_blank" rel="noopener noreferrer">Github</a>
+        </div>
+      </div>
+      <img src="../images/projects/source/buzz-up.png" alt="BuzzUp campus events app screenshot" class="case-study-image">
+    </section>
+
+    <div class="case-study-body">
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-circle-question"></i> The Problem</h2>
+        <p>SNHU students hear about campus events through scattered flyers, club group chats, and word of mouth, with no single place to browse what's happening, follow specific clubs, or get reminded before an event starts. BuzzUp centralizes campus events and club activity into one app, with RSVPs, check-ins, and notifications built around how students actually discover things on campus.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-user-gear"></i> My Role</h2>
+        <p>BuzzUp was built with one teammate as a two-person project. My work spanned the Supabase schema and row-level security policies, the Firebase authentication integration, the club-verification and QR check-in flows, and the automated test suite.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-diagram-project"></i> Key Technical Decisions</h2>
+        <ul>
+          <li><strong>Firebase for identity, Supabase for everything else.</strong> Firebase Authentication issues each user's identity, which is then used as the join key into Supabase tables for clubs, events, RSVPs, and check-ins &mdash; auth and application data are deliberately split across two purpose-built services instead of forcing one to do both.</li>
+          <li><strong>QR check-in reuses the existing club-trust check.</strong> Generating or scanning an event's check-in QR code is gated by the same "verified club member or admin" check already used to decide who can post events for a club, so a new feature didn't need a new trust surface. The check-in window opens 30 minutes before an event starts and stays open for the rest of the day.</li>
+          <li><strong>Personal event-conflict detection.</strong> Before a student RSVPs, the app checks their existing RSVPs for anything within a 2-hour window of the new event and warns them by name, instead of silently letting them double-book themselves.</li>
+          <li><strong>An actual automated test suite.</strong> Unlike a lot of solo portfolio projects, BuzzUp has a Vitest suite covering check-in logic, event conflicts, event validation, friend requests, moderation, notifications, recommendations, and the campus map &mdash; a regression safety net that's easy to skip under a deadline.</li>
+        </ul>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-bolt"></i> Challenges &amp; Solutions</h2>
+        <p>Club-leader verification needed to stop anyone from posting events under a club's name, without building a separate manual-approval queue for every club on campus. Verification is code-based: a club shares a join code with its real leadership, and entering the right club name plus code links a student's account to that club. That same membership check then gates who can create events, generate check-in QR codes, and view check-in analytics for that club &mdash; so one verification step unlocks the right permissions everywhere instead of being re-checked ad hoc per feature.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-flag-checkered"></i> Status &amp; What's Next</h2>
+        <p>BuzzUp is live and in use: 20+ SNHU students have adopted it for RSVPs, club follows, and event check-ins, running against a live Supabase backend with Firebase authentication and push notifications through Expo.</p>
+      </div>
+
+      <div class="case-study-cta">
+        <a href="../index.html#projects" class="back-link">&larr; Back to All Projects</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © <span id="footer-year">2025</span> Kenyang Lual. All rights reserved.
+  </footer>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="../index.js"></script>
+</body>
+</html>
