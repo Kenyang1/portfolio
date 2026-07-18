@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meow Management Case Study | Kenyang Lual</title>
+  <meta name="description" content="How I built Meow Management, a chatbot-assisted restaurant operations app with Supabase row-level security, Firebase Auth, and dedicated inventory, tasks, and finance tabs.">
+  <meta name="author" content="Kenyang Lual">
+  <link rel="canonical" href="https://www.klual.com/case-studies/meow-management.html">
+
+  <!-- Open Graph / Facebook, LinkedIn -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.klual.com/case-studies/meow-management.html">
+  <meta property="og:title" content="Meow Management Case Study | Kenyang Lual">
+  <meta property="og:description" content="A chatbot-assisted restaurant operations app with Supabase row-level security, Firebase Auth, and dedicated inventory, tasks, and finance tabs.">
+  <meta property="og:image" content="https://www.klual.com/images/projects/thumbnails/meow-management-thumbnail.png">
+  <meta property="og:site_name" content="Kenyang Lual">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.klual.com/case-studies/meow-management.html">
+  <meta name="twitter:title" content="Meow Management Case Study | Kenyang Lual">
+  <meta name="twitter:description" content="A chatbot-assisted restaurant operations app with Supabase row-level security, Firebase Auth, and dedicated inventory, tasks, and finance tabs.">
+  <meta name="twitter:image" content="https://www.klual.com/images/projects/thumbnails/meow-management-thumbnail.png">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="../images/branding/portfolio-mark.png">
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo"><span>Kenyang Lual</span></a>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="../index.html#about-section">About</a></li>
+      <li><a href="../index.html#skills-section">Skills</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <img src="../images/ui/menu-icon.png" id="menu-icon" alt="Menu Icon">
+    <button class="visit-btn"><a href="https://github.com/Kenyang1" target="_blank" rel="noopener noreferrer">Visit Github!</a></button>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li>
+        <a href="../index.html#about-section">
+          <span class="icon-box"><i class="fa-regular fa-address-card"></i></span>
+          <span class="menu-label">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#skills-section">
+          <span class="icon-box"><i class="fa-solid fa-code"></i></span>
+          <span class="menu-label">Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#experience">
+          <span class="icon-box"><i class="fa-solid fa-briefcase"></i></span>
+          <span class="menu-label">Experience</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#projects">
+          <span class="icon-box"><i class="fa-solid fa-diagram-project"></i></span>
+          <span class="menu-label">Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#contact">
+          <span class="icon-box"><i class="fa-solid fa-envelope"></i></span>
+          <span class="menu-label">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <main class="case-study-page">
+    <div class="case-study-nav">
+      <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+    <section class="case-study-hero">
+      <h3>Case Study</h3>
+      <h1>Meow Management</h1>
+      <p class="tagline">Restaurant operations, centralized.</p>
+      <div class="tech-stack">
+        <span class="tech-tag">React Native</span>
+        <span class="tech-tag">Expo</span>
+        <span class="tech-tag">Supabase (Postgres + RLS)</span>
+        <span class="tech-tag">Firebase Auth</span>
+      </div>
+      <div class="btn-group">
+        <div class="btn" id="git-btn">
+          <a href="https://github.com/Kenyang1/resturant-management-app" target="_blank" rel="noopener noreferrer">Github</a>
+        </div>
+      </div>
+      <img src="../images/projects/source/meow-management.png" alt="Meow Management restaurant dashboard screenshot" class="case-study-image">
+    </section>
+
+    <div class="case-study-body">
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-circle-question"></i> The Problem</h2>
+        <p>Small restaurant teams often track inventory counts, shift notes, and finances across disconnected paper logs, group texts, and spreadsheets. Meow Management centralizes those three things into one mobile dashboard, so a shift lead can check stock, log a note, or review finances from the same app.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-user-gear"></i> My Role</h2>
+        <p>I built Meow Management's mobile client and backend schema: the Expo/React Native app, the Supabase database and row-level security policies, and Miso, the in-app chatbot that searches inventory and notes.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-diagram-project"></i> Key Technical Decisions</h2>
+        <ul>
+          <li><strong>Supabase Postgres with row-level security.</strong> Inventory, tasks, and finance data is scoped per account at the database layer through RLS policies, not just filtered in the UI, so a client-side bug can't leak another account's data.</li>
+          <li><strong>Firebase for auth, Supabase for data.</strong> Firebase handles account sign-up and session state while Supabase, backed by its own migrations and edge functions, owns the operational data &mdash; keeping authentication and application data as separate, purpose-built concerns.</li>
+          <li><strong>Dedicated tabs instead of one dashboard.</strong> Inventory, tasks, finance, and a management log each get their own tab backed by their own Supabase tables, so day-to-day updates map to how a shift actually works instead of competing for space on one screen.</li>
+          <li><strong>Miso as a scoped chatbot, not a general assistant.</strong> The in-app chatbot is built as a fast search layer over existing inventory and notes data, so it only ever answers questions the underlying data can actually support.</li>
+        </ul>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-bolt"></i> Challenges &amp; Solutions</h2>
+        <p>Low-stock alerts needed to be useful without turning into noise. They're scoped per item on the inventory tab, so a manager sees a flag when something is actually running low instead of getting alerted on every stock change.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-flag-checkered"></i> Status &amp; What's Next</h2>
+        <p>Meow Management runs end-to-end against a live Supabase backend, with full CRUD across inventory, tasks, and finance, chatbot-assisted search, and an invite flow so more than one team member can access the same restaurant's dashboard.</p>
+      </div>
+
+      <div class="case-study-cta">
+        <a href="../index.html#projects" class="back-link">&larr; Back to All Projects</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © <span id="footer-year">2025</span> Kenyang Lual. All rights reserved.
+  </footer>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="../index.js"></script>
+</body>
+</html>

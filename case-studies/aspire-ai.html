@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AspireAI Case Study | Kenyang Lual</title>
+  <meta name="description" content="How I built AspireAI, an AI-powered career guidance platform with an agentic resume, interview, and career-matching pipeline built on Next.js, Firebase, and OpenAI.">
+  <meta name="author" content="Kenyang Lual">
+  <link rel="canonical" href="https://www.klual.com/case-studies/aspire-ai.html">
+
+  <!-- Open Graph / Facebook, LinkedIn -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.klual.com/case-studies/aspire-ai.html">
+  <meta property="og:title" content="AspireAI Case Study | Kenyang Lual">
+  <meta property="og:description" content="An AI-powered career guidance platform with an agentic resume, interview, and career-matching pipeline built on Next.js, Firebase, and OpenAI.">
+  <meta property="og:image" content="https://www.klual.com/images/projects/thumbnails/aspire-ai-thumbnail.png">
+  <meta property="og:site_name" content="Kenyang Lual">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.klual.com/case-studies/aspire-ai.html">
+  <meta name="twitter:title" content="AspireAI Case Study | Kenyang Lual">
+  <meta name="twitter:description" content="An AI-powered career guidance platform with an agentic resume, interview, and career-matching pipeline built on Next.js, Firebase, and OpenAI.">
+  <meta name="twitter:image" content="https://www.klual.com/images/projects/thumbnails/aspire-ai-thumbnail.png">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="../images/branding/portfolio-mark.png">
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo"><span>Kenyang Lual</span></a>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="../index.html#about-section">About</a></li>
+      <li><a href="../index.html#skills-section">Skills</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <img src="../images/ui/menu-icon.png" id="menu-icon" alt="Menu Icon">
+    <button class="visit-btn"><a href="https://github.com/Kenyang1" target="_blank" rel="noopener noreferrer">Visit Github!</a></button>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li>
+        <a href="../index.html#about-section">
+          <span class="icon-box"><i class="fa-regular fa-address-card"></i></span>
+          <span class="menu-label">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#skills-section">
+          <span class="icon-box"><i class="fa-solid fa-code"></i></span>
+          <span class="menu-label">Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#experience">
+          <span class="icon-box"><i class="fa-solid fa-briefcase"></i></span>
+          <span class="menu-label">Experience</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#projects">
+          <span class="icon-box"><i class="fa-solid fa-diagram-project"></i></span>
+          <span class="menu-label">Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#contact">
+          <span class="icon-box"><i class="fa-solid fa-envelope"></i></span>
+          <span class="menu-label">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <main class="case-study-page">
+    <div class="case-study-nav">
+      <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+    <section class="case-study-hero">
+      <h3>Case Study</h3>
+      <h1>AspireAI</h1>
+      <p class="tagline">Your future, made clearer.</p>
+      <span class="case-study-status">Portfolio Demo &middot; AI Features Require API Keys</span>
+      <div class="tech-stack">
+        <span class="tech-tag">Next.js 14</span>
+        <span class="tech-tag">React 18</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Tailwind CSS</span>
+        <span class="tech-tag">OpenAI (GPT-4o, Whisper)</span>
+        <span class="tech-tag">Firebase Auth</span>
+      </div>
+      <div class="btn-group">
+        <div class="btn" id="live-demo">
+          <a href="https://aspire-ai-rho.vercel.app/auth/signup" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+        <div class="btn" id="git-btn">
+          <a href="https://github.com/Kenyang1/aspireAI" target="_blank" rel="noopener noreferrer">Github</a>
+        </div>
+      </div>
+      <img src="../images/projects/source/aspire-ai.png" alt="AspireAI landing and dashboard screenshot" class="case-study-image">
+    </section>
+
+    <div class="case-study-body">
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-circle-question"></i> The Problem</h2>
+        <p>Career planning is usually scattered across generic job boards, disconnected resume tools, and separate interview-prep sites, with no single place that ties them together. AspireAI is built for high schoolers exploring options, college students preparing for internships, and career switchers who want a clearer next step — using AI as a mentor that helps someone interpret their own interests, rather than a tool that just hands them a generic answer.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-user-gear"></i> My Role</h2>
+        <p>I designed and built AspireAI end-to-end: the Next.js application, the Firebase authentication flow, the career-matching retrieval system, and the multi-stage AI agent pipeline that powers resume review and mock interviews.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-diagram-project"></i> Key Technical Decisions</h2>
+        <ul>
+          <li><strong>Agent pipeline as typed functions, not a framework.</strong> Resume review, tailored interview prep, and structured feedback are chained through sequential, typed functions (resume agent &rarr; research agent &rarr; interviewer agent) instead of an external orchestration library, keeping the flow easy to follow and debug.</li>
+          <li><strong>Local embeddings over a paid vector database.</strong> Career recommendations use retrieval-augmented generation against precomputed local embeddings and cosine similarity, so career matching works without a recurring hosted vector-database cost.</li>
+          <li><strong>Whisper + GPT-4o for structured interview feedback.</strong> Recorded practice answers are transcribed with Whisper, then scored against a STAR-method rubric by GPT-4o, turning an unstructured recording into concrete strengths, gaps, and rewrite suggestions.</li>
+          <li><strong>Firebase Authentication for account handling.</strong> Signup, login, logout, and password updates run through Firebase rather than a custom auth system, so the app didn't need to own password storage or session security.</li>
+        </ul>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-bolt"></i> Challenges &amp; Solutions</h2>
+        <p>Interview practice needed to support video, audio, and text modes without every screen depending on a live OpenAI key just to render. I scoped each AI integration &mdash; mentor chat, resume analysis, transcription, interview feedback &mdash; as an isolated, individually-degradable feature, so the dashboard, career browsing, and roadmap stay fully usable even when an OpenAI key is missing, expired, or rate-limited, and the interface says so honestly instead of failing silently.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-flag-checkered"></i> Status &amp; What's Next</h2>
+        <p>AspireAI is a fully built, demoable product &mdash; the interface, routing, and product flows all work today. The AI-powered surfaces (mentor chat, career matching, resume review, interview feedback) need a funded OpenAI key and a configured Firebase project to run live, since this was built as a portfolio-stage product rather than a hosted service with an ongoing API budget.</p>
+      </div>
+
+      <div class="case-study-cta">
+        <a href="../index.html#projects" class="back-link">&larr; Back to All Projects</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © <span id="footer-year">2025</span> Kenyang Lual. All rights reserved.
+  </footer>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="../index.js"></script>
+</body>
+</html>
