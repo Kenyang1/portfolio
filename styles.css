@@ -775,19 +775,14 @@ header {
 }
 
 .project-card {
-  padding: 3rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem;
   text-align: center;
-  gap: 1.5rem;
-  border-radius: 20px;
-  background-color: white;
-  border: 3px solid black;
-  box-shadow: 0.5px 4px 0 black;
+  border-radius: 16px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
   opacity: 1;
   transform: scale(1);
   height: fit-content;
@@ -795,14 +790,16 @@ header {
 }
 
 .project-card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: none;
   z-index: 2;
 }
 .project-card img{
   width: 100%;           /* full width of the card */
   max-width: 300px;      /* don't let it grow too big */
   height: auto;
+  display: block;
+  margin: 0 auto;
   border-radius: 1rem;
   object-fit: cover;     /* keeps nice scaling */
 }

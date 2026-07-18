@@ -98,17 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('resize', updateGridLayout);
 
-  projectCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      card.style.transform = 'scale(1.05)';
-      card.style.boxShadow = '0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000';
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'scale(1)';
-      card.style.boxShadow = '0.5px 4px 0 black';
-    });
-  });
 });
 
 window.addEventListener('load', function() {
