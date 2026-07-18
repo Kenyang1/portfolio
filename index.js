@@ -63,8 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const projectGrid = document.querySelector('.project-grid');
 
   function updateGridLayout() {
+    if (!projectGrid) return;
+
     const visibleCards = Array.from(projectCards).filter(card => !card.classList.contains('hide'));
-    
+
     if (visibleCards.length === 0) {
       projectGrid.style.display = 'none';
       return;
@@ -127,6 +129,10 @@ window.addEventListener('load', function() {
   const pikachuGif = document.getElementById('pikachu-loader-gif');
   const barContainer = document.querySelector('.loader-bar-bg');
   const whiteFade = document.getElementById('white-fade');
+
+  // Pages without the branded loader (e.g. case study pages) skip this animation entirely.
+  if (!loader || !barFill || !pikachuGif || !barContainer || !whiteFade) return;
+
   const barWidth = barContainer.offsetWidth - pikachuGif.offsetWidth;
   const pikachuStart = -40;
   let progress = 0;

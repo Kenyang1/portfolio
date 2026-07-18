@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guardian Case Study | Kenyang Lual</title>
+  <meta name="description" content="How I built Guardian, a cross-platform React Native and Expo budgeting app with a safe-to-spend dashboard, trusted-viewer sharing, and a strict TypeScript + Zod data layer.">
+  <meta name="author" content="Kenyang Lual">
+  <link rel="canonical" href="https://www.klual.com/case-studies/guardian.html">
+
+  <!-- Open Graph / Facebook, LinkedIn -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.klual.com/case-studies/guardian.html">
+  <meta property="og:title" content="Guardian Case Study | Kenyang Lual">
+  <meta property="og:description" content="A cross-platform React Native and Expo budgeting app with a safe-to-spend dashboard, trusted-viewer sharing, and a strict TypeScript + Zod data layer.">
+  <meta property="og:image" content="https://www.klual.com/images/projects/thumbnails/guardian-thumbnail.png">
+  <meta property="og:site_name" content="Kenyang Lual">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.klual.com/case-studies/guardian.html">
+  <meta name="twitter:title" content="Guardian Case Study | Kenyang Lual">
+  <meta name="twitter:description" content="A cross-platform React Native and Expo budgeting app with a safe-to-spend dashboard, trusted-viewer sharing, and a strict TypeScript + Zod data layer.">
+  <meta name="twitter:image" content="https://www.klual.com/images/projects/thumbnails/guardian-thumbnail.png">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="../images/branding/portfolio-mark.png">
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo"><span>Kenyang Lual</span></a>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="../index.html#about-section">About</a></li>
+      <li><a href="../index.html#skills-section">Skills</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <img src="../images/ui/menu-icon.png" id="menu-icon" alt="Menu Icon">
+    <button class="visit-btn"><a href="https://github.com/Kenyang1" target="_blank" rel="noopener noreferrer">Visit Github!</a></button>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li>
+        <a href="../index.html#about-section">
+          <span class="icon-box"><i class="fa-regular fa-address-card"></i></span>
+          <span class="menu-label">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#skills-section">
+          <span class="icon-box"><i class="fa-solid fa-code"></i></span>
+          <span class="menu-label">Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#experience">
+          <span class="icon-box"><i class="fa-solid fa-briefcase"></i></span>
+          <span class="menu-label">Experience</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#projects">
+          <span class="icon-box"><i class="fa-solid fa-diagram-project"></i></span>
+          <span class="menu-label">Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#contact">
+          <span class="icon-box"><i class="fa-solid fa-envelope"></i></span>
+          <span class="menu-label">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <main class="case-study-page">
+    <div class="case-study-nav">
+      <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+    <section class="case-study-hero">
+      <h3>Case Study</h3>
+      <h1>Guardian</h1>
+      <p class="tagline">Securing your financial growth.</p>
+      <span class="case-study-status">Portfolio Prototype</span>
+      <div class="tech-stack">
+        <span class="tech-tag">React Native</span>
+        <span class="tech-tag">Expo SDK 54</span>
+        <span class="tech-tag">TypeScript (Strict)</span>
+        <span class="tech-tag">Firebase Auth</span>
+        <span class="tech-tag">Zod</span>
+        <span class="tech-tag">Reanimated</span>
+      </div>
+      <div class="btn-group">
+        <div class="btn" id="git-btn">
+          <a href="https://github.com/Kenyang1/guardian-app" target="_blank" rel="noopener noreferrer">Github</a>
+        </div>
+      </div>
+      <img src="../images/projects/thumbnails/guardian-thumbnail.png" alt="Guardian personal finance app dashboard illustration" class="case-study-image">
+    </section>
+
+    <div class="case-study-body">
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-circle-question"></i> The Problem</h2>
+        <p>Personal budgeting apps often bury the one question people actually want answered &mdash; "what's safe to spend today?" &mdash; under charts, categories, and account jargon. Guardian narrows the dashboard down to that single number, then backs it up with category budgets and monthly progress for anyone who wants more detail.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-user-gear"></i> My Role</h2>
+        <p>I designed and built Guardian's entire client: the Expo/React Native app that runs on iOS, Android, and web from one codebase, the typed API layer, the Firebase authentication flow, and the trusted-viewer sharing system.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-diagram-project"></i> Key Technical Decisions</h2>
+        <ul>
+          <li><strong>Strict TypeScript with shared Zod schemas.</strong> Every budget, transaction, categorization, and trusted-viewer payload is modeled with Zod and shared between the client and its typed API client, so a shape mismatch is caught by validation instead of surfacing as a runtime crash.</li>
+          <li><strong>One networking seam.</strong> All API calls run through a single <code>src/lib/api.ts</code> file that attaches a Firebase ID token as a bearer token to every request, so screens never call <code>fetch</code> directly and the auth logic exists in exactly one place.</li>
+          <li><strong>One codebase, two layouts.</strong> Expo Router renders a five-tab layout on mobile and a sidebar above a 900px breakpoint, reusing the same screen components rather than maintaining separate mobile and web UIs.</li>
+          <li><strong>UI-enforced sharing, documented as UI-only.</strong> Trusted-viewer sharing (invite by email or code, two-step revoke, read-only dashboard) is built as a client-side boundary, and I documented in the README that a production version would need that same restriction enforced server-side, not just hidden in the UI.</li>
+        </ul>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-bolt"></i> Challenges &amp; Solutions</h2>
+        <p>Automatic merchant categorization needed to feel instant without hammering the API on every keystroke. I debounced the category-suggestion request by 800ms after the merchant field settles, and surfaced a source label (cache, LLM, or fallback) next to the suggested category so the UI stays transparent about where a suggestion came from &mdash; with a one-tap manual override always available.</p>
+      </div>
+
+      <div class="case-study-section">
+        <h2><i class="fa-solid fa-flag-checkered"></i> Status &amp; What's Next</h2>
+        <p>Guardian is an explicitly-labeled portfolio prototype: authentication, the budgeting dashboard, transaction entry, category budgets, and trusted-viewer sharing all work end-to-end against a live API. Recent-transaction history, savings goals, bank-account sync, and most profile settings are roadmapped rather than implemented, and the app is upfront about that in its own UI instead of faking finished features.</p>
+      </div>
+
+      <div class="case-study-cta">
+        <a href="../index.html#projects" class="back-link">&larr; Back to All Projects</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © <span id="footer-year">2025</span> Kenyang Lual. All rights reserved.
+  </footer>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="../index.js"></script>
+</body>
+</html>
