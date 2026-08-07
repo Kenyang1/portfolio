@@ -33,7 +33,7 @@ Outside of software development, I play piano, guitar, and drums. Music gives me
 
 ### Southern New Hampshire University
 
-**Bachelor of Science in Computer Science**  
+**Bachelor of Science in Computer Science**<br>
 2023 - 2027 | Manchester, New Hampshire
 
 ## 💼 Experience
@@ -42,7 +42,7 @@ Outside of software development, I play piano, guitar, and drums. Music gives me
 
 **June 2026 - Present | Merrimack, New Hampshire**
 
-Developing a Trusted Contact Person feature for Fidelity's investing app using Angular, Ionic, and NgRx Signal Store. My work includes integrating gRPC API calls, validating customer contact data end to end, and applying Fidelity's design system across new consumer-facing screens.
+Owned the end-to-end delivery of an enterprise-grade user-management capability within a complex Angular/Ionic codebase, from a LaunchDarkly-controlled rollout through a rigorous five-layer data pipeline spanning the UI, NgRx SignalStore, repository, typed API wrapper, and Orval-generated OpenAPI services. Designed UI-agnostic state orchestration and strongly typed data boundaries to decouple presentation, business logic, and transport concerns, improving testability, scalability, and long-term maintainability. Implemented context-aware Angular route guards to protect sensitive client-side navigation, complemented by backend authorization boundaries, and validated production readiness through deterministic mock-driven scenarios and comprehensive automated testing.
 
 ### Software Engineering Intern - Fidelity Investments
 
