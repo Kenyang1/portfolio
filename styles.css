@@ -1306,7 +1306,7 @@ li a:hover::before {
   box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 0 #000;
 }
 
-/* Live Demo / GitHub / Case Study link row under each project card */
+/* Live Demo / GitHub link row under each project card */
 .btn-group {
   display: flex;
   flex-wrap: wrap;
@@ -1319,16 +1319,6 @@ li a:hover::before {
 }
 #live-demo:hover {
   background: #c2dbf7;
-  color: #000;
-}
-#case-study-btn {
-  background: #9381ff;
-}
-#case-study-btn a {
-  color: white !important;
-}
-#case-study-btn:hover {
-  background: #7c67ff;
   color: #000;
 }
 
